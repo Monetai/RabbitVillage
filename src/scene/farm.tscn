@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://7hdr133v2vm6"]
+[gd_scene load_steps=4 format=3 uid="uid://7hdr133v2vm6"]
 
 [ext_resource type="Texture2D" uid="uid://drrd8ea1b5vcy" path="res://assets/tilemap_packed.png" id="1_0fffo"]
+[ext_resource type="Script" path="res://src/script/farm.gd" id="1_xl815"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_27a4q"]
-radius = 26.0192
+radius = 50.0
 
-[node name="Farm" type="Area2D"]
+[node name="Farm" type="Area2D" groups=["farm"]]
+script = ExtResource("1_xl815")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_0fffo")

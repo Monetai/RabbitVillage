@@ -1,5 +1,8 @@
 # Manageur de baise
 extends Node
+
+## Gere la baise dans toutes ses formes
+
 const BAISE_EFFECT = preload("res://src/scene/baise_effect.tscn")
 
 func make_baise_happen(lapin_1: Rabbit, lapin_2: Rabbit):

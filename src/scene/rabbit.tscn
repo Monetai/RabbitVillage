@@ -1,7 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://datvh036b5nrx"]
+[gd_scene load_steps=8 format=3 uid="uid://datvh036b5nrx"]
 
 [ext_resource type="Script" path="res://src/script/rabbit.gd" id="1_kstxw"]
-[ext_resource type="Texture2D" uid="uid://scwyjhg1dg2i" path="res://icon.svg" id="1_y5xwm"]
+[ext_resource type="Texture2D" uid="uid://ds51085bc4ugu" path="res://assets/Rabbits/Rabbit_idle.png" id="2_ol4rv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1wvo"]
+atlas = ExtResource("2_ol4rv")
+region = Rect2(0, 0, 256, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ymy1"]
+atlas = ExtResource("2_ol4rv")
+region = Rect2(256, 0, 256, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arg0d"]
+atlas = ExtResource("2_ol4rv")
+region = Rect2(0, 0, 256, 264)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_elttj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1wvo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ymy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arg0d")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ko0w3"]
 radius = 14.5602
@@ -9,9 +43,12 @@ radius = 14.5602
 [node name="Rabbit" type="Node2D"]
 script = ExtResource("1_kstxw")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.234375, 0.234375)
-texture = ExtResource("1_y5xwm")
+sprite_frames = SubResource("SpriteFrames_elttj")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.269419
 
 [node name="BaiseDetector" type="Area2D" parent="."]
 collision_layer = 2
@@ -25,7 +62,6 @@ shape = SubResource("CircleShape2D_ko0w3")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 10.0
-debug_enabled = true
 debug_path_custom_color = Color(1, 0.180392, 0.180392, 1)
 
 [connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
