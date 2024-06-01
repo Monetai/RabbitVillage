@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ewl40gl56321"]
 
 [ext_resource type="Script" path="res://src/script/world.gd" id="1_dvl1p"]
-[ext_resource type="TileSet" uid="uid://vtlwqu5rggt3" path="res://assets/test_tilemap.tres" id="1_nwd04"]
+[ext_resource type="TileSet" uid="uid://dd1c4r67lv8rq" path="res://assets/test_tilemap.tres" id="1_nwd04"]
 [ext_resource type="PackedScene" uid="uid://datvh036b5nrx" path="res://src/scene/rabbit.tscn" id="2_2vbtk"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kdqed"]

@@ -13,7 +13,8 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wcaay"]
-texture = ExtResource("1_oy54l")
+texture = ExtResource("1_2fas3")
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -626,6 +627,7 @@ texture = ExtResource("1_oy54l")
 scenes/1/scene = ExtResource("2_b1u6m")
 
 [resource]
+tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 terrain_set_0/mode = 1
