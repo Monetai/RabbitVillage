@@ -1,5 +1,5 @@
 class_name BaiseEffect
-extends Sprite2D
+extends Node2D
 
 const RABBIT = preload("res://src/scene/rabbit.tscn")
 

@@ -12,6 +12,7 @@ source_geometry_group_name = &"navigation"
 agent_radius = 16.0
 
 [node name="GameScene" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Ground" type="TileMap" parent="." groups=["navigation"]]
 tile_set = ExtResource("1_abcp7")
@@ -34,8 +35,40 @@ target = NodePath("../Marker2D2")
 position = Vector2(241, 150)
 target = NodePath("../Marker2D")
 
+[node name="Rabbit3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(548, 246)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit4" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(713, 386)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit5" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(413, 493)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit6" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(120, 407)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit7" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(241, 233)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit8" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(1001, 307)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit9" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(739, 172)
+target = NodePath("../Marker2D")
+
+[node name="Rabbit10" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_6fduy")]
+position = Vector2(978, 530)
+target = NodePath("../Marker2D")
+
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(252, 523)
+position = Vector2(1002, 133)
 
 [node name="Marker2D2" type="Marker2D" parent="."]
-position = Vector2(922, 523)
+position = Vector2(129, 125)

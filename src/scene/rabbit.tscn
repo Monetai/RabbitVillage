@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://datvh036b5nrx"]
+[gd_scene load_steps=8 format=3 uid="uid://datvh036b5nrx"]
 
 [ext_resource type="Script" path="res://src/script/rabbit.gd" id="1_kstxw"]
 [ext_resource type="Texture2D" uid="uid://clactpiow02a7" path="res://assets/Rabbits/Rabbit_idle.png" id="2_lu7nv"]
@@ -21,19 +21,27 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ko0w3"]
 radius = 19.4165
 
+[sub_resource type="Animation" id="Animation_f6bmh"]
+resource_name = "poop"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ftw3"]
+_data = {
+"poop": SubResource("Animation_f6bmh")
+}
+
 [node name="Rabbit" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_kstxw")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -30)
-scale = Vector2(0.25, 0.25)
+position = Vector2(0, -33)
 sprite_frames = SubResource("SpriteFrames_uccas")
 animation = &"Walk"
 autoplay = "Walk"
 frame_progress = 0.556553
 
 [node name="BaiseDetector" type="Area2D" parent="."]
-position = Vector2(0, -22)
+position = Vector2(0, -26)
 collision_layer = 2
 collision_mask = 2
 input_pickable = false
@@ -47,5 +55,10 @@ shape = SubResource("CircleShape2D_ko0w3")
 path_desired_distance = 10.0
 debug_enabled = true
 debug_path_custom_color = Color(1, 0.180392, 0.180392, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8ftw3")
+}
 
 [connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]

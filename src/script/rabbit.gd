@@ -47,7 +47,7 @@ func on_gros_baiseur_detected(baiseur: Area2D):
 	
 	can_fuck = false
 	autre_baiseur.can_fuck = false
-	BaiseManager.make_baise_happen(self, autre_baiseur)
+	BaiseManager.call_deferred("make_baise_happen", self, autre_baiseur)
 
 
 # Lié a la baise

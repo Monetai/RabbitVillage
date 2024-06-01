@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 BaiseManager="*res://src/singleton/baise_manager.gd"
 TileManager="*res://src/singleton/tile_manager.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [input]
 
 click={
