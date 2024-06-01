@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 		
 	var direction = global_position.direction_to(navigation_agent.get_next_path_position())
 	direction = direction.normalized()
+	scale.x = sign(direction.x * -1)
 	translate(direction * SPEED * delta)
 	
 func set_navigation_agent(new_target: Marker2D):
