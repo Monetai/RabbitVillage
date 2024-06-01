@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://7hdr133v2vm6"]
+
+[ext_resource type="Texture2D" uid="uid://drrd8ea1b5vcy" path="res://assets/tilemap_packed.png" id="1_0fffo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_27a4q"]
+radius = 26.0192
+
+[node name="Farm" type="Area2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_0fffo")
+region_enabled = true
+region_rect = Rect2(192, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_27a4q")

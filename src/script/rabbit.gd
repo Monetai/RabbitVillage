@@ -19,7 +19,7 @@ var stopped : bool = false
 func _ready():
 	baise_cooldown.timeout.connect(on_baise_cooldown_ended)
 	baise_detector.area_entered.connect(on_gros_baiseur_detected)
-	call_deferred("set_navigation_agent")
+	call_deferred("set_navigation_agent", target)
 
 func _physics_process(delta: float) -> void:
 	if navigation_agent.is_navigation_finished() or stopped:
@@ -29,11 +29,11 @@ func _physics_process(delta: float) -> void:
 	direction = direction.normalized()
 	translate(direction * SPEED * delta)
 	
-func set_navigation_agent():
+func set_navigation_agent(new_target: Marker2D):
 	if not target:
-		navigation_agent.target_position = Vector2(randf_range(0, 300), randf_range(0,300))		
+		navigation_agent.target_position = Vector2(randf_range(0, 530), randf_range(0,370))		
 	else:
-		navigation_agent.target_position = target.global_position
+		navigation_agent.target_position = new_target.global_position
 	
 func on_baise_cooldown_ended():
 	can_fuck = true
@@ -43,7 +43,6 @@ func on_gros_baiseur_detected(baiseur: Area2D):
 	
 	var autre_baiseur : Rabbit = baiseur.owner
 	if autre_baiseur.can_fuck == false: return
-	print("J'viens de faire une rencontre")
 	
 	can_fuck = false
 	autre_baiseur.can_fuck = false
@@ -58,3 +57,7 @@ func stop():
 func unstop():
 	visible = true
 	stopped = false
+
+
+func _on_navigation_agent_2d_navigation_finished() -> void:
+	navigation_agent.target_position = Vector2(randf_range(0, 530), randf_range(0,370))

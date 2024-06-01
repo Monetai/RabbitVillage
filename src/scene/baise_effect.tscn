@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cctwqnhw74np6"]
 
 [ext_resource type="Texture2D" uid="uid://scwyjhg1dg2i" path="res://icon.svg" id="1_obemb"]
-[ext_resource type="Script" path="res://src/scene/baise_effect.gd" id="2_gkqps"]
+[ext_resource type="Script" path="res://src/script/baise_effect.gd" id="2_gkqps"]
 
 [sub_resource type="Animation" id="Animation_va3yu"]
 resource_name = "fuck"
