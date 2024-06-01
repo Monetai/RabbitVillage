@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds51085bc4ugu"
-path="res://.godot/imported/Rabbit_idle.png-8475e09d08cf5f4a8f391381e5a58144.ctex"
+path="res://.godot/imported/Rabbit_move.png-4318fc021b2b18b90775053271996b49.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Rabbits/Rabbit_idle.png"
-dest_files=["res://.godot/imported/Rabbit_idle.png-8475e09d08cf5f4a8f391381e5a58144.ctex"]
+source_file="res://assets/Rabbits/Rabbit_move.png"
+dest_files=["res://.godot/imported/Rabbit_move.png-4318fc021b2b18b90775053271996b49.ctex"]
 
 [params]
 
