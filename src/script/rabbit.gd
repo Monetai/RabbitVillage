@@ -4,6 +4,7 @@ extends Node2D
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var baise_cooldown: Timer = $BaiseCooldown
 @onready var baise_detector: Area2D = $BaiseDetector
+@onready var animated_sprite: AnimatedSprite2D = $Sprite2D
 
 @export var target : Marker2D
 @export var SPEED : int = 100
@@ -23,7 +24,7 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	if navigation_agent.is_navigation_finished() or stopped:
-		return
+		animated_sprite.animation = "walk"
 		
 	var direction = global_position.direction_to(navigation_agent.get_next_path_position())
 	direction = direction.normalized()
@@ -49,6 +50,10 @@ func on_gros_baiseur_detected(baiseur: Area2D):
 	autre_baiseur.can_fuck = false
 	BaiseManager.call_deferred("make_baise_happen", self, autre_baiseur)
 
+
+# Lié a la crotte
+func spawn_poop():
+	pass
 
 # Lié a la baise
 func stop():
