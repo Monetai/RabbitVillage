@@ -5,7 +5,9 @@ extends Node2D
 @onready var baise_cooldown: Timer = $BaiseCooldown
 @onready var baise_detector: Area2D = $BaiseDetector
 @onready var animated_sprite: AnimatedSprite2D = $Sprite2D
+@onready var poop_cooldown: Timer = $PoopCooldown
 
+const CROTTE = preload("res://src/scene/crotte.tscn")
 @export var target : Marker2D
 @export var SPEED : int = 100
 var can_fuck : bool = true:
@@ -53,7 +55,10 @@ func on_gros_baiseur_detected(baiseur: Area2D):
 
 # Lié a la crotte
 func spawn_poop():
-	pass
+	var crotte = CROTTE.instantiate()
+	get_tree().current_scene.add_child(crotte)
+	poop_cooldown.start()
+	
 
 # Lié a la baise
 func stop():

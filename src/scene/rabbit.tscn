@@ -38,21 +38,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ko0w3"]
 radius = 19.4165
 
-[sub_resource type="Animation" id="Animation_f6bmh"]
-resource_name = "poop"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"poop"]
-}
-
 [sub_resource type="Animation" id="Animation_t28kc"]
 length = 0.001
 tracks/0/type = "value"
@@ -78,6 +63,21 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(),
 "update": 0,
 "values": []
+}
+
+[sub_resource type="Animation" id="Animation_f6bmh"]
+resource_name = "poop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"poop"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8ftw3"]
