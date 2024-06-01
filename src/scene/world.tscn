@@ -636,12 +636,10 @@ navigation_polygon = SubResource("NavigationPolygon_kdqed")
 [node name="Rabbit" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_2vbtk")]
 position = Vector2(58, 50)
 target = NodePath("../Marker2D")
-SPEED = null
 
 [node name="Rabbit2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_2vbtk")]
 position = Vector2(261, 50)
 target = NodePath("../Marker2D2")
-SPEED = null
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(314, 47)
