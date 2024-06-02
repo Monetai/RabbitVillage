@@ -60,8 +60,23 @@ func _process(delta: float) -> void:
 			vacuum.global_position = get_global_mouse_position()
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.is_pressed():
-		#Selon outil selectionné, faire action
-		pass
+	if event is InputEventMouseButton:
+		print(event)
+		if event.is_pressed():
+			match(tool_selected):
+				TOOL.FARM:
+					pass
+				TOOL.DESTROY:
+					pass
+				TOOL.VACUUM:
+					vacuum.start()
+		else:
+			match(tool_selected):
+				TOOL.FARM:
+					pass
+				TOOL.DESTROY:
+					pass
+				TOOL.VACUUM:
+					vacuum.stop()
 		
 			

@@ -25,3 +25,9 @@ func eject(new_position: Vector2, direction: float):
 	# Movement
 	eject_angle = Vector2( direction, randf_range(-1, 1))
 	speed = randf_range(0.3, 1.2)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	## Lorsque le vacuum passe au dessus d'une crotte
+	Stats.crotte_count += 1
+	call_deferred("queue_free")
