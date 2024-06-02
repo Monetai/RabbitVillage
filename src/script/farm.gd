@@ -1,7 +1,9 @@
+@tool
 class_name Farm
-extends Area2D
+extends StaticBody2D
 
-@onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var collision_shape : CollisionShape2D = $DetectionArea/CollisionShape2D
+
 
 var production : float = 1.2
 @export var radius : float = 20

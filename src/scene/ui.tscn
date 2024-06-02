@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1c5y2ha7u1oh"]
+
+[ext_resource type="Script" path="res://src/script/UI.gd" id="1_toynr"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_toynr")
+
+[node name="Farm" type="Button" parent="."]
+offset_left = 1701.0
+offset_top = 113.0
+offset_right = 1749.0
+offset_bottom = 144.0
+text = "Farm"
+
+[node name="Vacuum" type="Button" parent="."]
+offset_left = 1703.0
+offset_top = 173.0
+offset_right = 1774.0
+offset_bottom = 204.0
+text = "Vacuum"
+
+[node name="Destroy" type="Button" parent="."]
+offset_left = 1701.0
+offset_top = 229.0
+offset_right = 1770.0
+offset_bottom = 260.0
+text = "Destroy
+"
+
+[node name="CrotteCounter" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 984.0
+offset_right = 59.0
+offset_bottom = 1007.0
+text = "Compteur de Crotte : "
+
+[node name="RabbitCounter" type="Label" parent="."]
+offset_left = 1579.0
+offset_top = 984.0
+offset_right = 1746.0
+offset_bottom = 1007.0
+text = "Compteur de Lapins : "
