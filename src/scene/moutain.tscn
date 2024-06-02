@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://hkp5uuy7p38c"]
+
+[ext_resource type="Texture2D" uid="uid://dbn1io3clvwdl" path="res://assets/Mountains/moutain_tilesheet.png" id="1_t821f"]
+[ext_resource type="Script" path="res://src/script/moutain.gd" id="2_my2sb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j63ls"]
+size = Vector2(64, 64)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("2_my2sb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_j63ls")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_t821f")
+hframes = 2
+frame = 1

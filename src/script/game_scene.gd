@@ -72,6 +72,9 @@ func check_farm_position(selected_tile: Vector2i):
 		selected_tile + Vector2i(0, -1),
 		selected_tile + Vector2i(1, -1),
 		selected_tile + Vector2i(1, 0),
+		selected_tile + Vector2i(-1,0),
+		selected_tile + Vector2i(-1,1),
+		selected_tile + Vector2i(0,1),
 	]
 	return cells.all(func(x): return x in farm_tiles)
 

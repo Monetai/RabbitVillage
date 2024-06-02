@@ -1,7 +1,8 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://kybl8ipkarbb"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://kybl8ipkarbb"]
 
 [ext_resource type="Texture2D" uid="uid://beu5amgwb83bk" path="res://assets/Tilemaps/Ground.png" id="1_leqlu"]
 [ext_resource type="PackedScene" uid="uid://7hdr133v2vm6" path="res://src/scene/farm.tscn" id="2_j48dg"]
+[ext_resource type="PackedScene" uid="uid://hkp5uuy7p38c" path="res://src/scene/moutain.tscn" id="3_mgl0k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w5wom"]
 texture = ExtResource("1_leqlu")
@@ -89,6 +90,9 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5ppkr"]
 resource_name = "sceneSet"
 scenes/1/scene = ExtResource("2_j48dg")
+scenes/1/display_placeholder = ExtResource("2_j48dg")
+scenes/2/scene = ExtResource("3_mgl0k")
+scenes/2/display_placeholder = ExtResource("3_mgl0k")
 
 [resource]
 tile_size = Vector2i(64, 64)

@@ -1,12 +1,12 @@
 extends CanvasLayer
 
-@onready var farm: Button = $ToolBar/ToolRect/TextureRect/Farm
-@onready var vacuum: Button = $ToolBar/ToolRect/TextureRect2/Vacuum
-@onready var destroy: Button = $ToolBar/ToolRect/TextureRect3/Destroy
+@onready var farm: Button = %FarmButton
+@onready var vacuum: Button = %VacuumButton
+@onready var destroy: Button = %DestroyButton
 
-@onready var crotte_counter: Label = $StatBar/VBoxContainer/CrotteRect/CrotteCounter
-@onready var rabbit_counter: Label = $StatBar/VBoxContainer/RabbitRect/RabbitCounter
-@onready var carrot_counter: Label = $Control/VBoxContainer/CarrotRect/CarottCounter
+@onready var crotte_counter: Label = %CrotteCounter
+@onready var rabbit_counter: Label = %RabbitCounter
+@onready var carrot_counter: Label = %CarotteCounter
 
 signal tool_selected(tool)
 
@@ -17,3 +17,4 @@ func _ready():
 	
 	Stats.crotte_count_changed.connect(func(new_count): crotte_counter.text = str(new_count))
 	Stats.rabbit_count_changed.connect(func(new_count): rabbit_counter.text = str(new_count))
+	Stats.carrot_count_changed.connect(func(new_count): carrot_counter.text = str(new_count))

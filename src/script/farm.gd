@@ -1,4 +1,3 @@
-@tool
 class_name Farm
 extends StaticBody2D
 

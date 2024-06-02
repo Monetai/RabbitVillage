@@ -35,6 +35,8 @@ layout_mode = 2
 texture = ExtResource("2_412qi")
 
 [node name="CrotteCounter" type="Label" parent="StatBar/VBoxContainer/CrotteRect"]
+unique_name_in_owner = true
+layout_mode = 0
 offset_left = 137.0
 offset_top = 85.0
 offset_right = 304.0
@@ -56,6 +58,8 @@ layout_mode = 2
 texture = ExtResource("2_412qi")
 
 [node name="RabbitCounter" type="Label" parent="StatBar/VBoxContainer/RabbitRect"]
+unique_name_in_owner = true
+layout_mode = 0
 offset_left = 130.0
 offset_top = 86.0
 offset_right = 299.0
@@ -76,7 +80,9 @@ self_modulate = Color(0.776471, 0.603922, 0.478431, 1)
 layout_mode = 2
 texture = ExtResource("2_412qi")
 
-[node name="CarottCounter" type="Label" parent="StatBar/VBoxContainer/CarrotRect"]
+[node name="CarotteCounter" type="Label" parent="StatBar/VBoxContainer/CarrotRect"]
+unique_name_in_owner = true
+layout_mode = 0
 offset_left = 137.0
 offset_top = 85.0
 offset_right = 304.0
@@ -144,7 +150,8 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("5_0ttkc")
 
-[node name="Farm" type="Button" parent="ToolBar/ToolRect/TextureRect"]
+[node name="FarmButton" type="Button" parent="ToolBar/ToolRect/TextureRect"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -174,7 +181,8 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("5_0ttkc")
 
-[node name="Vacuum" type="Button" parent="ToolBar/ToolRect/TextureRect2"]
+[node name="VacuumButton" type="Button" parent="ToolBar/ToolRect/TextureRect2"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -204,7 +212,8 @@ grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("5_0ttkc")
 
-[node name="Destroy" type="Button" parent="ToolBar/ToolRect/TextureRect3"]
+[node name="DestroyButton" type="Button" parent="ToolBar/ToolRect/TextureRect3"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -222,11 +231,10 @@ text = "Destroy
 
 [node name="MoodBar" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 192.0
 grow_horizontal = 2
-grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="MoodBar"]
 layout_mode = 1
