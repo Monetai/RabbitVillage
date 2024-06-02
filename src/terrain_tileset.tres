@@ -87,6 +87,7 @@ texture_region_size = Vector2i(64, 64)
 13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5ppkr"]
+resource_name = "sceneSet"
 scenes/1/scene = ExtResource("2_j48dg")
 
 [resource]

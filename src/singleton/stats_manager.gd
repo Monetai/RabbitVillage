@@ -3,7 +3,7 @@ extends Node
 signal crotte_count_changed(new_count)
 signal rabbit_count_changed(new_count)
 
-var crotte_count : int = 0:
+var crotte_count : int = 9999:
 	set(new_value):
 		crotte_count = new_value
 		crotte_count_changed.emit(new_value)
