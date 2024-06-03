@@ -9,7 +9,7 @@ var free_tilemap : TileMap
 func get_farm_tile(farm: Farm):
 	var tile_list = []
 	var free_tiles = free_tilemap.get_used_cells(0)
-	var obs_tiles = obs_tilemap.get_used_cells_by_id(0, 0, Vector2(5,0))
+	var obs_tiles = obs_tilemap.get_used_cells_by_id(0, 1, Vector2.ZERO, 2)
 	
 	var tiles = free_tiles.filter(func(x): return x not in obs_tiles)
 	
@@ -22,6 +22,7 @@ func get_farm_tile(farm: Farm):
 	return tile_list
 
 func refresh_farm_production():
+	var total_production
 	var temp_farm_list = {}
 	var farm_list = get_tree().get_nodes_in_group("farm")
 	

@@ -65,10 +65,13 @@ wait_time = 5.0
 one_shot = true
 
 [node name="RunCooldown" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
 autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 10.0
+debug_enabled = true
 debug_path_custom_color = Color(1, 0.180392, 0.180392, 1)
 
 [node name="PoopSpawner" type="Marker2D" parent="."]

@@ -90,9 +90,7 @@ texture_region_size = Vector2i(64, 64)
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5ppkr"]
 resource_name = "sceneSet"
 scenes/1/scene = ExtResource("2_j48dg")
-scenes/1/display_placeholder = ExtResource("2_j48dg")
 scenes/2/scene = ExtResource("3_mgl0k")
-scenes/2/display_placeholder = ExtResource("3_mgl0k")
 
 [resource]
 tile_size = Vector2i(64, 64)

@@ -73,6 +73,7 @@ position = Vector2(1074, 736)
 [node name="ToolList" type="Node2D" parent="."]
 
 [node name="Vacuum" parent="ToolList" instance=ExtResource("4_xv2wf")]
+position = Vector2(-701, -235)
 
 [node name="FarmCursor" type="Node2D" parent="ToolList"]
 position = Vector2(-907, -190)

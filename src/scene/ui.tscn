@@ -87,7 +87,7 @@ offset_left = 137.0
 offset_top = 85.0
 offset_right = 304.0
 offset_bottom = 108.0
-text = "Compteur de Crotte : "
+text = "Compteur de Carotte : "
 
 [node name="TextureRect" type="TextureRect" parent="StatBar/VBoxContainer/CarrotRect"]
 self_modulate = Color(1, 0.658824, 0.45098, 1)
